@@ -1763,11 +1763,6 @@ $top = array();
 
     case "ckorder":
       $data = $_POST['formData'];
-      // echo '<pre>';
-      // print_r($data);
-      // echo '</pre>';
-      // echo count($data);
-      // echo $data[0]['value'];
       $total = 0;
       for($i = 0; $i < count($data); $i++){
         $sql = "SELECT * FROM `chef_recipe` WHERE (`IsDefault` = 1) and `DefaultRecipeID` = " . $data[$i]['value'] ;
