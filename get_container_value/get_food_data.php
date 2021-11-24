@@ -22,7 +22,7 @@ switch ($functionName) {
             <div class="col-md-6 col-lg-3">
                 <div class="product shadow ">
                     <a class="img-prod" onclick="totalFood(\'add\',\'' . $row[0] . '\')">
-                    <img class="img-fluid rounded" src="./images/' . $row[4] . '" alt="Colorlib Template">
+                    <img class="img-fluid rounded" src="./images/' . $row[4] . '" style="height:253px;"  alt="Colorlib Template">
                         <div class="overlay"></div>
                     </a>
                     <div class="text py-3 pb-4 px-3 text-center">
