@@ -31,7 +31,11 @@
                 <p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://www.facebook.com/profile.php?id=100045183468766" target="_blank">colorlib</a>
+                    Copyright &copy;<script>
+                    document.write(new Date().getFullYear());
+                    </script> All rights reserved | This website is made with <b>LIVER</b> by <a
+                        href="https://github.com/hhboy4158"
+                        target="_blank">hhboy4158..</a>
 
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.-->
                 </p>
@@ -43,11 +47,13 @@
 
 
 <!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
         <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
             stroke="#F96D00" />
-    </svg></div>
+    </svg>
+</div>
 
 
 <script src="js/jquery.min.js"></script>
@@ -108,24 +114,25 @@ function navlist(tbody, mid) {
     });
 }
 check_ischef();
-function check_ischef(){
+
+function check_ischef() {
     $.ajax({
         type: "POST",
         url: "./get_container_value/get_isChef.php",
         data: {
-            user_id: 1,//無意義，lol
+            user_id: 1, //無意義，lol
         },
         cache: false
     }).done(function(msg) {
         // console.log(msg);
-        switch(msg){
-            case "0"://尚未認證使用者
+        switch (msg) {
+            case "0": //尚未認證使用者
                 window.location.href = './pages/chef_portfolio/phase_02.php';
                 break;
-            case "1"://chef
+            case "1": //chef
                 window.location.href = './pages/chef_portfolio/index.php';
                 break;
-            case "100"://一般使用者
+            case "100": //一般使用者
                 console.log("cust");
                 break;
             default:
